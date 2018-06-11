@@ -40,9 +40,8 @@ class ProductsController extends Controller
      */
     public function store(ProductRequest $request)
     {
-       // return "store";
         $producto =new Product;
-        //$producto=Product::find($id);
+        
         $producto->name=$request->name;
         $producto->short=$request->short;
         $producto->body=$request->body;
@@ -109,4 +108,12 @@ class ProductsController extends Controller
         $producto->delete();
         return back()-> with('info','El registro ha sido eliminado');
     }
+    public function json()
+    {
+        $producto=Product::all();
+        return response()
+            ->json(['name' => 'Abigail', 'state' => 'CA']);
+     //   return back();
+    }
+
 }

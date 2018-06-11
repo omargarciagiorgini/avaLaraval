@@ -17,8 +17,14 @@
 </head>
 <body>
 <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+                <h1 class="page-header text-center">CRUD AValihTest</h1>
+
+                @yield('contenido')
+        </div>
+    </div>
     
-    @yield('contenido')
 
 </div>
 </body>

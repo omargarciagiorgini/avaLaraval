@@ -17,3 +17,5 @@ Route::get('/', function () {
 */
 Route::resource('productos','ProductsController');
 Route::get('/','ProductsController@index');
+Route::get('json','JsonController@index');
+//Route::get('/json','ProductsController@json');

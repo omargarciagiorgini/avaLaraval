@@ -2,14 +2,14 @@
 @extends('navbar')
 
 @section('contenido')
-<table class="table table-dark table-hover">
+<div class="col-sm-8">
+<table class="table table-dark table-hover table-striped ">
     <thead>
       <tr>
         <th>Id</th>
         <th>Name</th>
         <th>Short</th>
-        <th> </th>
-        <th> </th>
+        <th colspan=3>  &nbsp; </th>
       </tr>
     </thead>
     <tbody>
@@ -34,5 +34,11 @@
       </tr>
     @endforeach
     </tbody>
-  </table>
+  </table> 
+      {!! $datos->render()!!}
+
+  </div>
+  <div class="col-sm-4">
+    mensaje
+  </div>
 @endsection
